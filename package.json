@@ -1,0 +1,16 @@
+{
+  "name": "oop-solid-branas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alisson L. Schwanz <alissonludtkeschwanz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode development"
+  },
+  "devDependencies": {
+    "ts-loader": "^7.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
