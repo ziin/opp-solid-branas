@@ -1,13 +1,13 @@
-function addListenerToButtons(
+function addListenerToButtons (
   event: string,
   classNames: string[],
   cb: (event: Event, button: HTMLButtonElement) => void
 ) {
   for (const className of classNames) {
-    const buttons = document.getElementsByClassName(className);
+    const buttons = document.getElementsByClassName(className)
     for (const button of buttons) {
       if (button instanceof HTMLButtonElement) {
-        button.addEventListener(event, (event) => cb(event, button));
+        button.addEventListener(event, (event) => cb(event, button))
       }
     }
   }
@@ -31,33 +31,33 @@ function addListenerToButtons(
 // );
 
 // Alternative way
-function bindEventListenerToClassNames(
+function bindEventListenerToClassNames (
   event: string,
   classNames: string | string[],
   cb: () => void
 ) {
   for (const element of document.getElementsByClassName(
-    typeof classNames === "string" ? classNames : classNames.join(" ")
+    typeof classNames === 'string' ? classNames : classNames.join(' ')
   )) {
-    element.addEventListener(event, cb);
+    element.addEventListener(event, cb)
   }
 }
 
-bindEventListenerToClassNames("click", ["btn--twitter"], () =>
-  window.open("https://twitter.com/share?url=https://www.google.com")
-);
+bindEventListenerToClassNames('click', ['btn--twitter'], () =>
+  window.open('https://twitter.com/share?url=https://www.google.com')
+)
 
-bindEventListenerToClassNames("click", "btn--print", () => window.print());
+bindEventListenerToClassNames('click', 'btn--print', () => window.print())
 
 // Alternative
-function bindOnClickOpenUrlByClassNames(classNames: string[], url: string) {
-  for (const element of document.getElementsByClassName(classNames.join(" "))) {
-    element.addEventListener("click", () => window.open(url));
+function bindOnClickOpenUrlByClassNames (classNames: string[], url: string) {
+  for (const element of document.getElementsByClassName(classNames.join(' '))) {
+    element.addEventListener('click', () => window.open(url))
   }
 }
 
-function bindOnClickOpenPrint(classNames: string[]) {
-  for (const element of document.getElementsByClassName(classNames.join(" "))) {
-    element.addEventListener("click", () => window.print());
+function bindOnClickOpenPrint (classNames: string[]) {
+  for (const element of document.getElementsByClassName(classNames.join(' '))) {
+    element.addEventListener('click', () => window.print())
   }
 }

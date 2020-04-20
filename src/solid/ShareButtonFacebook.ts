@@ -1,12 +1,7 @@
-import AbstractShareButtonLink from "./AbstractShareButtonLink";
-import EventHandler from "./EventHandler";
+import AbstractShareButtonLink from './AbstractShareButtonLink'
 
 export default class ShareButtonFacebook extends AbstractShareButtonLink {
-  constructor(eventHandler: EventHandler, clazz: string, url: string) {
-    super(eventHandler, clazz, url);
-  }
-
-  protected createLink() {
-    return `https://facebook.com/share.php?u=${this.url}`;
+  protected createLink: string () {
+    return `https://facebook.com/share.php?u=${this.url}`
   }
 }

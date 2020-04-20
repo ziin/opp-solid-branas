@@ -1,3 +1,1 @@
-import "./procedural";
-
-
+import './procedural'
